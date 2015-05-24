@@ -1,6 +1,7 @@
 # Programming supplement for book Business Intelligence Data Mining
 
 1. Tutorial
+
 Htwt data: scatter dectree regression cluster
 
 1.1. Tutorial2: text mining
