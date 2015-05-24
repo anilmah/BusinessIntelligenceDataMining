@@ -13,8 +13,11 @@ Nytimes text: wordcloud
 R, weka 
 
 3. Big data exercise w R
+  
   A. Divvy bikes 
+
   B. Twitter stream on meditation
+  
   C. Web usage logs 
 
 Directory Structure:
