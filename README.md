@@ -2,7 +2,11 @@
 
 1. Tutorial
 
-Htwt data: scatter dectree regression cluster
+Data set: HeightWeight data: 
+  Scatter Plot 
+  Decision Tree
+  Regression
+  Cluster
 
 1.1. Tutorial2: text mining
 
