@@ -2,6 +2,7 @@
 
 1. Tutorial
 Htwt data: scatter dectree regression cluster
+
 1.1. Tutorial2: text mining
 Nytimes text: wordcloud
 
@@ -10,7 +11,9 @@ R, weka
 
 3. Big data exercise w R
 A. Divvy bikes 
-B Twitter stream on meditation
-C. ..... Web usage logs 
+B. Twitter stream on meditation
+C. Web usage logs 
 
 Directory Structure:
+
+
