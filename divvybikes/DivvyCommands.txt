@@ -1,0 +1,178 @@
+
+
+// Load complete divvy set data to R Studio
+divvydata <- read.csv("/Users/janardhanbonu/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Trips_2014_Q1Q2.csv")
+
+// Get number of rows
+> nrow(divvydata)
+905699 rows and 12 columns
+
+> names(divvydata)
+ [1] "trip_id"           "starttime"         "stoptime"          "bikeid"           
+ [5] "tripduration"      "from_station_id"   "from_station_name" "to_station_id"    
+ [9] "to_station_name"   "usertype"          "gender"            "birthyear"
+
+// Sample 10000 rows
+
+# splitdf function will return a list of training and testing sets
+splitdf <- function(dataframe, seed=NULL) {
+	if (!is.null(seed)) set.seed(seed)
+	index <- 1:nrow(dataframe)
+	trainindex <- sample(index, trunc(length(index)/10))
+	trainset <- dataframe[trainindex, ]
+	testset <- dataframe[-trainindex, ]
+	list(trainset=trainset,testset=testset)
+}
+
+
+testdata$starttime <- strptime(testdata$starttime,"%m/%d/%Y %H:%M")
+testdata$stoptime <- strptime(testdata$stoptime,"%m/%d/%Y %H:%M")
+
+
+# Seasons
+
+December - Winter
+January
+February
+
+March - Spring
+April
+May
+
+June - Summer
+July
+August
+
+September - Fall
+October
+November
+
+
+season <- function(dataframe){
+	if(dataframe$month == "December") {
+		sn <- "Winter"
+	}
+	if(dataframe$month == "January") {
+		sn <- "Winter"
+	}
+	if(dataframe$month == "February") {
+		sn <- "Winter"
+	} 
+	if(dataframe$month == "March") {
+		sn <- "Spring"
+	}
+	if(dataframe$month == "April") {
+		sn <- "Spring"
+	}
+	if(dataframe$month == "May") {
+		sn <- "Spring"
+	}
+	if(dataframe$month == "June") {
+		sn <- "Summer"
+	}
+	if(dataframe$month == "July") {
+		sn <- "Summer"
+	}
+	if(dataframe$month == "August") {
+		sn <- "Summer"
+	} 
+	if(dataframe$month == "September") {
+		sn <- "Fall"
+	}
+	if(dataframe$month == "October")  {
+		sn <- "Fall"
+	}
+	if(dataframe$month == "November") {
+		sn <- "Fall"
+	} 
+	return(sn)
+} 
+
+testdata$season <- season(testdata$month)
+
+
+
+
+season <- function(month){
+if(month == "December" || month == "January" || month == "February") {
+sn <- "Winter"
+}
+if(month == "March" || month == "April" || month == "May") {
+sn <- "Spring"
+}
+if(month == "June" || month == "July" || month == "August") {
+sn <- "Summer"
+}
+if(month == "September" || month == "October" || month == "November") {
+sn <- "Fall"
+}
+return(sn)
+}
+testdata$season <- season(testdata$month)
+
+
+frame$twohouses <- ifelse(frame$data>=2, 2, 1)
+
+testdata$season <- ifelse(testdata$season == "January","
+
+mydata$var3[mydata$var3 > 500 ] <- NA  
+
+testdata$season[testdata$month=="January"] <- "Winter"
+testdata$season[testdata$month=="February"] <- "Winter"
+testdata$season[testdata$month=="March"] <- "Spring"
+testdata$season[testdata$month=="April"] <- "Spring"
+testdata$season[testdata$month=="May"] <- "Spring"
+testdata$season[testdata$month=="June"] <- "Summer"
+testdata$season[testdata$month=="July"] <- "Summer"
+testdata$season[testdata$month=="August"] <- "Summer"
+testdata$season[testdata$month=="September"] <- "Fall"
+testdata$season[testdata$month=="October"] <- "Fall"
+testdata$season[testdata$month=="November"] <- "Fall"
+testdata$season[testdata$month=="December"] <- "Winter"
+
+testdata$hour <- format(testdata$starttime,"%H")
+
+
+
+percent <- round(summary(testdata$usertype) * 100 / nrow(testdata))
+labels <- sprintf("%s (%d%%)", levels(testdata$usertype), percent)
+pie(summary(testdata$usertype), lab=labels)
+
+
+percent <- round(summary(testdata$weekday) * 100 / nrow(testdata))
+labels <- sprintf("%s (%d%%)", levels(testdata$weekday), percent)
+pie(summary(testdata$weekday), lab=labels)
+
+
+dd<-data.frame(
+  saldt=seq(as.Date("1999-01-01"), as.Date("2014-01-10"), by="6 mon"),
+  salpr = cumsum(rnorm(31))
+)
+A simple plot with
+
+with(dd, plot(saldt, salpr))
+
+
+hist(testdata$hour, freq=F)
+curve(dnorm(x, mean(testdata$hour), sd(testdata$hour)), add=T)
+
+barplot(table(testdata$hour, testdata$weekday), legend.text=T)
+
+legend("topright",legend = testdata$usertype, ncol = 2, cex = 0.75)
+legend("topright",legend = testdata$usertype)
+
+
+plot(cars$dist~cars$speed,
+   xlim=c(0,30),
+   ylim=c(0,24))
+   
+   
+plot(x=testdata$starttime, y=testdata$hour, ylim=c(0,24), col='black', type='l', main='YHOO stock close', xlab='date', ylab='close ($)', xaxt='n')   
+
+
+
+dates <- seq(as.Date(, format = "%d/%m/%Y"),
+             by = "days", length = length(f))
+
+plot(dates, f)
+

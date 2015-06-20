@@ -1,0 +1,100 @@
+
+View(maleover30)
+data1 <- read.csv("/Users/janardhanbonu/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Trips_20140630.csv")
+data2 <- read.csv("/Users/janardhanbonu/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Trips_20140630.csv")
+View(data1)
+View(data2)
+data1 <- read.csv("/Users/janardhanbonu/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Trips_20140630.csv")
+savehistory("~/RLanguage/HistoryDivvy1.Rhistory")
+attach(data1)
+names(data1)
+levels(gender)
+levels(trip_id)
+levels(starttime)
+names(data1)
+levels(birthyear)
+levels(usertype)
+
+names(data1)
+levels(usertype)
+subscribers <- data1[gender=="Subscriber"]
+View(subscribers)
+View(subscribers)
+subscribers <- data1[usertype=="Subscriber"]
+rm(subscribers)
+subscribers <- data1[usertype=="Subscriber"]
+attach(data1)
+
+
+subscriber <- data1[usertype=="Subscriber",]
+customer <- data1[usertype=="Customer",]
+subscriber$age <- (2015 - subscriber$age)
+subscriber$age <- (2015 - subscriber$birthyear)
+View(data1)
+View(subscriber)
+
+data1$age <- (2015 - data1$birthyear)
+
+View(data1)
+
+data1$age
+
+maleover30 <- data1[gender=="Male" & age>30,]
+View(maleover30)
+male <- data1[gender=="Male",]
+malebelow30 <- data1[gender=="Male" & age<30,]
+View(maleover30)
+View(malebelow30)
+View(malebelow30)
+install.packages(psych)
+install.packages("psych")
+install.packages(psych)
+install.packages(psych)
+library(psych)
+describe(data1)
+save.image("~/RLanguage/divvy.RData")
+plot(density(starttime))
+names(data1)
+plot(density(tripduration))
+table(usertype)
+pie(table(usertype))
+pie(table(gender))
+pie(table(subscriber$gender))
+barplot(table(subscriber$gender))
+barplot(table(usertype))
+
+data2 <- data1
+names(data2)
+head(data2)
+data2$starttime <- strptime(data2$starttime,"%m/%d/%Y %H:%M")
+data2$stoptime <- strptime(data2$stoptime,"%m/%d/%Y %H:%M")
+data2$timedifference <- (starttime - stoptime)
+data2$timedifference <- (data2$starttime - data2$stoptime)
+View(data2)
+data2$timedifference <- (data2$stoptime - data2$starttime)
+View(data2)
+View(data1)
+View(data2)
+barplot(table(data2$timedifference))
+savehistory("~/RLanguage/HistoryDivvy2.Rhistory")
+View(data1)
+View(data2)
+install.packages("tree")
+install.packages("rattle")
+install.packages("rpart")
+library("tree", lib.loc="~/R/win-library/3.0")
+library("rpart", lib.loc="~/R/win-library/3.0")
+library("rpart.plot", lib.loc="~/R/win-library/3.0")
+library("rattle", lib.loc="~/R/win-library/3.0")
+library("psych", lib.loc="~/R/win-library/3.0")
+library("stats", lib.loc="C:/data/R/R-3.0.2/library")
+divvydata <- read.csv("C:\Users\984417\OneDrive\MUM\datamining\rawdata\Divvy_Stations_Trips_2014-Q1Q2\Divvy_Stations_2014-Q1Q2.xlsx")
+divvydata <- read.csv("C:/Users/984417/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Stations_2014-Q1Q2.xlsx")
+divvydata <- read.csv("C:/Users/984417/OneDrive/MUM/datamining/rawdata/Divvy_Stations_Trips_2014-Q1Q2/Divvy_Trips_2014_Q1Q2.csv")
+names(divvydata)
+attach(divvydata)
+levels(usertype)
+levels(gender)
+divvydata$age - (2015 - divvydata$birthyear)
+divvydata$age <- (2015 - divvydata$birthyear)
+plot(density(starttime))
